@@ -1,0 +1,106 @@
+/* Basic styles for the home page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c7def5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .meal-item {
+    background-color: #f8cccc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .meal-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .meal-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .meal-item h2 {
+    font-size: 1.2em;
+    margin: 16px;
+  }
+  
+  button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #004085;
+  }
+
+  /* Animation for meal items */
+/* @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+  
+  .meal-item {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Button hover animation */
+  button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 123, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  

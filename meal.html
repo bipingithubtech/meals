@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .meal-detail {
+            text-align: center;
+            margin: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .meal-detail img {
+            width: 50%;
+            height: 40;
+            border-bottom: 1px solid #faa7a7;
+            animation: zoomIn 1s ease-out;
+        }
+
+        .meal-detail h1 {
+            font-size: 2em;
+            margin: 20px 0;
+            color: #333;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .meal-detail p {
+            font-size: 1.1em;
+            margin: 10px 20px;
+            line-height: 1.6;
+            color: #0c0c0c;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .meal-detail .instructions {
+            font-size: 1em;
+            color: #444;
+            margin: 20px;
+            padding: 0 20px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mealDetail" class="meal-detail"></div>
+    <script src="./meal.js"></script>
+</body>
+
+</html>
